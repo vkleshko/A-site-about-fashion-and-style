@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from django.views import generic
 
-from fashion.models import Item
+from fashion.models import Item, Category
 
 
 def index(request):
@@ -14,3 +15,9 @@ def index(request):
     }
 
     return render(request, "fashion/index.html", context)
+
+
+class CategoryListView(generic.ListView):
+    queryset = Category.objects.all()
+    context_object_name = "categories_list"
+    template_name = "fashion/categories.html"
