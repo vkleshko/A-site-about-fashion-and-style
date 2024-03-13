@@ -16,6 +16,9 @@ class Item(models.Model):
     description = models.TextField()
     picture = models.ImageField(upload_to=item_image_file_path)
 
+    def __str__(self):
+        return f"{self.name} {self.description}"
+
 
 class Category(models.Model):
     CATEGORY_CHOICES = (
@@ -31,3 +34,6 @@ class Category(models.Model):
     category = models.CharField(
         max_length=1, choices=CATEGORY_CHOICES
     )
+
+    def __str__(self):
+        return self.category
