@@ -15,3 +15,19 @@ class Item(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField()
     picture = models.ImageField(upload_to=item_image_file_path)
+
+
+class Category(models.Model):
+    CATEGORY_CHOICES = (
+        ("B", ("Business")),
+        ("C", ("Casual")),
+        ("F", ("Formal")),
+        ("L", ("Lingerie")),
+        ("S", ("Sportswear")),
+    )
+    item = models.ForeignKey(
+        Item, on_delete=models.CASCADE, related_name="categories"
+    )
+    category = models.CharField(
+        max_length=1, choices=CATEGORY_CHOICES
+    )
