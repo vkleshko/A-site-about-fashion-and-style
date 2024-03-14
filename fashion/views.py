@@ -39,3 +39,9 @@ class FormalWearListView(generic.ListView):
     queryset = Item.objects.filter(categories__name="Formal")
     context_object_name = "formal_wear_list"
     template_name = "fashion/categories/formal.html"
+
+
+class SportsWearListView(generic.ListView):
+    queryset = Item.objects.filter(categories__name="Sports")
+    context_object_name = "sports_wear_list"
+    template_name = "fashion/categories/sports.html"

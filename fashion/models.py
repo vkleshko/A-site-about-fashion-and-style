@@ -25,7 +25,6 @@ class Category(models.Model):
         ("Business", ("Business")),
         ("Casual", ("Casual")),
         ("Formal", ("Formal")),
-        ("Lingerie", ("Lingerie")),
         ("Sports", ("Sports")),
     )
     item = models.ForeignKey(
