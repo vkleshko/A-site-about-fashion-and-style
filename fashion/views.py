@@ -18,7 +18,7 @@ def index(request):
 
 
 class CategoryListView(generic.ListView):
-    queryset = Category.objects.all()
+    queryset = Category.objects.values("name", "category_url").distinct()
     context_object_name = "categories_list"
     template_name = "fashion/categories.html"
 
