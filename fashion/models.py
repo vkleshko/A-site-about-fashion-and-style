@@ -34,6 +34,17 @@ class Category(models.Model):
     name = models.CharField(
         max_length=10, choices=CATEGORY_CHOICES
     )
+    category_url = models.CharField(max_length=64, blank=True)
 
     def __str__(self):
         return self.name
+
+    def save(
+            self, force_insert=False, force_update=False, using=None, update_fields=None
+    ):
+        self.category_url = f"fashion:{self.name.lower()}-wear"
+
+        return super().save(
+            force_insert=False, force_update=False, using=None, update_fields=None
+
+        )
