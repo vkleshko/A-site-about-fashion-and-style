@@ -5,7 +5,8 @@ from fashion.views import (
     CategoryListView,
     BusinessWearListView,
     CasualWearListView,
-    FormalWearListView
+    FormalWearListView,
+    SportsWearListView,
 )
 
 urlpatterns = [
@@ -14,5 +15,6 @@ urlpatterns = [
     path("categories/business/", BusinessWearListView.as_view(), name="business-wear"),
     path("categories/casual/", CasualWearListView.as_view(), name="casual-wear"),
     path("categories/formal/", FormalWearListView.as_view(), name="formal-wear"),
+    path("categories/sports/", SportsWearListView.as_view(), name="sports-wear"),
 ]
 app_name = "fashion"
