@@ -21,3 +21,9 @@ class CategoryListView(generic.ListView):
     queryset = Category.objects.all()
     context_object_name = "categories_list"
     template_name = "fashion/categories.html"
+
+
+class BusinessWearListView(generic.ListView):
+    queryset = Item.objects.filter(categories__name="Business")
+    context_object_name = "business_wear_list"
+    template_name = "fashion/business.html"
