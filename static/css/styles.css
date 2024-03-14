@@ -1,8 +1,13 @@
 body {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .link-to-page {
     float: right;
     margin: 0 2px 0 2px;
+}
+
+.item-image {
+    width: 250px;
+    height: 300px;
 }

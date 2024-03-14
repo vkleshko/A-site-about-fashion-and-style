@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+  Business wear
+</h1>
+{% if business_wear_list %}
+<ul class="list-group list-group-flush">
+  {% for wear in business_wear_list %}
+  <li class="list-group-item">
+    <figure class="figure">
+      <img src="{{ wear.picture.url }}" class="item-image" alt="{{ wear.name }}">
+      <div>
+        <strong>{{ wear.name }}</strong>
+        <figcaption class="figure-caption">{{ wear.description }}</figcaption>
+      </div>
+    </figure>
+    <h3></h3>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>There are no wears</p>
+{% endif %}
+{% endblock %}

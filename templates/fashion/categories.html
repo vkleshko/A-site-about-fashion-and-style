@@ -17,8 +17,9 @@
   <tbody>
   {% for category in categories_list %}
   <tr>
+
     <td>{{ category.name }}</td>
-    <td><a href="#">show items</a></td>
+    <td><a href="{% url category.category_url %}">show items</a></td>
   </tr>
   {% endfor %}
   </tbody>
