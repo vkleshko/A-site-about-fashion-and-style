@@ -1,12 +1,14 @@
 {% extends "base.html" %}
 
+{% block title %}<title>Casual wear</title>{% endblock %}
+
 {% block content %}
 <h1>
-  Business wear
+  Casual wear
 </h1>
-{% if business_wear_list %}
+{% if casual_wear_list %}
 <ul class="list-group list-group-flush">
-  {% for wear in business_wear_list %}
+  {% for wear in casual_wear_list %}
   <li class="list-group-item">
     <figure class="figure">
       <img src="{{ wear.picture.url }}" class="item-image" alt="{{ wear.name }}">
