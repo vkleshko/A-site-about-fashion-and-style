@@ -4,7 +4,7 @@ Django project about fashion and style
 
 ## Check it out!
 
-[Fashion project deployed to render]()
+[Fashion project deployed to render](https://fashion-and-style.onrender.com)
 
 ## Installation
 
