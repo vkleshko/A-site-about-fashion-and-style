@@ -1,0 +1,9 @@
+Django==4.1.
+drf_spectacular==0.26.5
+python-dotenv==1.0.1
+django-debug-toolbar==3.2.4
+psycopg2-binary==2.9.9
+crispy-bootstrap4==2023.1
+django-crispy-forms==2.1
+dj-database-url==2.1.0
+whitenoise==6.6.0
